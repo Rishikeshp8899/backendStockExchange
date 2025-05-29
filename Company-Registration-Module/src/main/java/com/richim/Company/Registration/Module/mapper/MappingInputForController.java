@@ -14,11 +14,11 @@ public class MappingInputForController {
 			companyRegistration.setContact_no(inputController.getContact_no());
 			companyRegistration.setLocation(inputController.getLocation());
 			companyRegistration.setPassword(inputController.getPassword());
-			companyRegistration.setTurnover1(inputController.getTurnover1());
-			companyRegistration.setTurnover2(inputController.getTurnover2());
-			companyRegistration.setTurnover3(inputController.getTurnover3());
-			companyRegistration.setTurnover4(inputController.getTurnover4());
-			companyRegistration.setTurnover5(inputController.getTurnover5());
+			companyRegistration.setTurnover1(inputController.getTurnover_no_1());
+			companyRegistration.setTurnover2(inputController.getTurnover_no_2());
+			companyRegistration.setTurnover3(inputController.getTurnover_no_3());
+			companyRegistration.setTurnover4(inputController.getTurnover_no_4());
+			companyRegistration.setTurnover5(inputController.getTurnover_no_5());
 			return (T) companyRegistration;
 		}
 
