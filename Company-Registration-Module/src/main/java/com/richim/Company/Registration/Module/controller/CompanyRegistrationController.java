@@ -27,7 +27,7 @@ public class CompanyRegistrationController {
 	@Autowired
 	private CompanyRegisterService companyRegisterService;
 	
-	@PostMapping("/addCompanyRegistration")
+	@PostMapping("/registration")
 	public ResponseEntity<RestOutputController> addRegistration(@RequestBody RestInputController restInputController) {
 		RestOutputController outputController=new RestOutputController();
 		restInputController.setApiName("addCompanyRegister");
