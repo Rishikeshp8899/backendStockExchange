@@ -9,13 +9,13 @@ Built with **Spring Boot**, **Spring Cloud**, **Spring Security (JWT)**, a
 
 ## 📂 Project Layout
 
-backendStockExchange/<br>
-├── api-gateway/ → Spring Cloud Gateway (routing / token relay)
-<br>
-├── Company-Registration-Module/ → Company onboarding & share info<br>
-├── customer-registration-module/ → Customer onboarding & profiles<br>
-├── Demand-Supply-service/ → Buy / sell order matching<br>
-├── Share-Crud-Service/ → CRUD for shares<br>
-├── exchange-server/ → Eureka service registry<br>
-├── repository/ → Shared JPA / PostgreSQL access layer<br>
-├── security/ → Central auth service (Spring Security + JWT)<br>
+📁 **backendStockExchange/**<br>
+├── 🚪 **api-gateway/** → 🌐 Spring Cloud Gateway (routing / token relay)<br>
+├── 🏢 **Company-Registration-Module/** → 🧾 Company onboarding & share info<br>
+├── 👤 **customer-registration-module/** → 🧍 Customer onboarding & profile management<br>
+├── ⚖️ **Demand-Supply-service/** → 🔁 Buy / Sell order matching logic<br>
+├── 🧮 **Share-Crud-Service/** → ✏️ CRUD operations for shares<br>
+├── 🧭 **exchange-server/** → 🗂️ Eureka Service Discovery<br>
+├── 🗃️ **repository/** → 🧬 Shared JPA layer + PostgreSQL access<br>
+├── 🔐 **security/** → 🛡️ Central Auth (Spring Security + JWT)<br>
+
