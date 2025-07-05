@@ -11,6 +11,7 @@ Built with **Spring Boot**, **Spring Cloud**, **Spring Security (JWT)**, a
 
 backendStockExchange/
 ├── api-gateway/ → Spring Cloud Gateway (routing / token relay)
+<br>
 ├── Company-Registration-Module/ → Company onboarding & share info
 ├── customer-registration-module/ → Customer onboarding & profiles
 ├── Demand-Supply-service/ → Buy / sell order matching
