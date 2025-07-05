@@ -1,5 +1,7 @@
 package com.richim.security.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -19,6 +21,8 @@ import com.richim.security.repo.UserRepository;
 @RestController
 public class LoginController {
 	
+	 private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
+	
 	@Autowired
 	private AuthenticationManager authenticationManager;
 	
@@ -33,20 +37,22 @@ public class LoginController {
 
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestBody User user) {
+    	logger.info("LoginController|register|register method started"+user.toString());
         if (userRepository.findByUsername(user.getUsername()) != null) {
+        	logger.info("LoginController|register|user already taken");
             return ResponseEntity.badRequest().body("Username already taken");
         }
 
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         userRepository.save(user);
-
+        logger.info("LoginController|register|User registered successfully");
         return ResponseEntity.ok("User registered successfully");
     }
 	
 	
 	@PostMapping("/login")
 	public ResponseEntity<String> login(@RequestBody User user) {
-		
+		logger.info("LoginController|login|login method started"+user.toString());
 		  Authentication authentication = authenticationManager.authenticate(
 			        new UsernamePasswordAuthenticationToken(
 			            user.getUsername(),
@@ -55,6 +61,7 @@ public class LoginController {
 			    );
 			    SecurityContextHolder.getContext().setAuthentication(authentication);
 			    String jwt = jwtUtils.generateJwtToken(authentication);
+			    logger.info("LoginController|login|jwt is generate for user:="+jwt);
 			    return ResponseEntity.ok(jwt);
 	}
 
