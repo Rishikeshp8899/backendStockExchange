@@ -1,4 +1,4 @@
-# 📈 backendStockExchange
+# 📈 Stock Exchange Backend 
 
 A microservices‑based backend system that simulates a **Stock Exchange**.  
 Built with **Spring Boot**, **Spring Cloud**, **Spring Security (JWT)**, and **PostgreSQL**.
@@ -9,7 +9,7 @@ Built with **Spring Boot**, **Spring Cloud**, **Spring Security (JWT)**, a
 
 ## 📂 Project Layout
 
-📁 **backendStockExchange/**<br>
+📁 **Backend Stock Exchange/**<br>
 ├── 🚪 **api-gateway/** → 🌐 Spring Cloud Gateway (routing / token relay)<br>
 ├── 🏢 **Company-Registration-Module/** → 🧾 Company onboarding & share info<br>
 ├── 👤 **customer-registration-module/** → 🧍 Customer onboarding & profile management<br>
