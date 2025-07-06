@@ -28,7 +28,7 @@ public class TransactionImpl implements TransactionService {
 		//check type
 		
 		//call api
-		transactionRepo.save()
+	
 		
 	}
 
