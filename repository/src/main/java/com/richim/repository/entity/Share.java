@@ -37,5 +37,55 @@ public class Share {
 	  @NotNull(message = "Quantity is required")
 	  @Min(value = 1, message = "Quantity must be greater than 0")
 	  private Integer quantity;
-	  
+
+	public Long getShareId() {
+		return shareId;
+	}
+
+	public void setShareId(Long shareId) {
+		this.shareId = shareId;
+	}
+
+	public Company getCompany() {
+		return company;
+	}
+
+	public void setCompany(Company company) {
+		this.company = company;
+	}
+
+	public Double getShareAmount() {
+		return shareAmount;
+	}
+
+	public void setShareAmount(Double shareAmount) {
+		this.shareAmount = shareAmount;
+	}
+
+	public Shareholder getShareholder() {
+		return shareholder;
+	}
+
+	public void setShareholder(Shareholder shareholder) {
+		this.shareholder = shareholder;
+	}
+
+	public Integer getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
+	}
+
+	public Share(Long shareId, Company company, Double shareAmount, Shareholder shareholder, Integer quantity) {
+		super();
+		this.shareId = shareId;
+		this.company = company;
+		this.shareAmount = shareAmount;
+		this.shareholder = shareholder;
+		this.quantity = quantity;
+	}
+	
+	public Share() {}
 }

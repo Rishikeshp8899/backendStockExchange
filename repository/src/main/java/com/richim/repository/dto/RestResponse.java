@@ -20,6 +20,8 @@ public class RestResponse implements  Serializable {
 	private int numberOfShare;
 	private List<Share> shareList;
 	private int sharePrice;
+	private Share share;
+	
 	public int getStatusCode() {
 		return statusCode;
 	}
@@ -62,8 +64,20 @@ public class RestResponse implements  Serializable {
 	public void setSharePrice(int sharePrice) {
 		this.sharePrice = sharePrice;
 	}
+	
+	public Share getShare() {
+		return share;
+	}
+
+	public void setShare(Share share) {
+		this.share = share;
+	}
+	
+	public RestResponse() {
+	}
+	
 	public RestResponse(int statusCode, String status, String company_name, String company_email, int numberOfShare,
-			List<Share> shareList, int sharePrice) {
+			List<Share> shareList, int sharePrice, Share share) {
 		super();
 		this.statusCode = statusCode;
 		this.status = status;
@@ -72,7 +86,7 @@ public class RestResponse implements  Serializable {
 		this.numberOfShare = numberOfShare;
 		this.shareList = shareList;
 		this.sharePrice = sharePrice;
+		this.share = share;
 	}
-	public RestResponse() {}
 	
 }
